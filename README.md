@@ -3,7 +3,6 @@
 -
 
 ## 👩🏽‍🚀 Feature List:
-
 -
 
 ## 👩🏽‍🚀 Start Up Guide:
