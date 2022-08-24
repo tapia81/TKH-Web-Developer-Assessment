@@ -37,7 +37,7 @@ export const Tasks = (props) => {
   const createTask = async (event) => {
     event.preventDefault();
     await axios({
-      url: `http://localhost:3001/`,
+      url: `${process.env.REACT_APP_MONGO_URL}/`,
       method: "POST",
       data: newTask,
     })
@@ -50,7 +50,7 @@ export const Tasks = (props) => {
   const deleteTask = async (event, id) => {
     event.preventDefault();
     await axios({
-      url: `http://localhost:3001/${id}`,
+      url: `${process.env.REACT_APP_MONGO_URL}/${id}`,
       method: "DELETE",
     })
       .then(() => console.log("task deleted"))
@@ -59,7 +59,7 @@ export const Tasks = (props) => {
 
   const updateTask = async (id) => {
     await axios({
-      url: `http://localhost:3001/${id}`,
+      url: `${process.env.REACT_APP_MONGO_URL}/${id}`,
       method: "PUT",
       data: newTask,
     })
